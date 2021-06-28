@@ -1,5 +1,11 @@
-class UsersApi{
-    constructor(){
-        this.api_root_endpoint = 'https://jsonplaceholder.typicode.com/posts/'
+import { HttpClient } from "../../../HttpClient.service.js";
+import { APIEndpoints } from "../apiEndpoints.js";
+
+export class UsersApi{
+    static getUsers(){
+        return HttpClient.get(APIEndpoints.USERS_ENDPOINT);
     }
+    
+
+
 }

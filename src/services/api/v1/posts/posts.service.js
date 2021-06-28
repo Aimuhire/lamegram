@@ -1,5 +1,10 @@
-class PostsApi{
+import { APIEndpoints } from "../apiEndpoints";
+
+export class PostsApi{
     constructor(){
-        this.api_root_endpoint = 'https://jsonplaceholder.typicode.com/posts/'
+        this.api_root = APIEndpoints.POSTS_ENDPOINT
     }
+
+    
+
 }
