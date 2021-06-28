@@ -1,0 +1,59 @@
+/* shared */
+.page-title {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+/* users page styles */
+
+#lame-app-root {
+    background-color: whitesmoke;
+}
+
+.users-container {
+    margin: 50px 0;
+    padding:  0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user-list-item {
+    padding: 7px;
+    justify-content: space-between;
+    border-radius: 5px;
+    width: 300px;
+    margin: 30px;
+    background-color: white;
+
+}
+
+.card {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.user-name{
+    font-size: 1.5em;
+}
+
+.user-email {
+    color: gray;
+    font-size: 1.2em;
+
+}
+
+.get-user-posts-btn {
+    border: none;
+    background-color: #3F86F3;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
