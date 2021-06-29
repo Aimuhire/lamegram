@@ -5,13 +5,8 @@ export const ViewRegistry = {
     users: {
         viewName: "users",
         viewTitle: "Available Users",
-        viewRoute: "/users",
+        viewRoute: "/lamegram/users",
         viewController: UsersController,
-    },
-    user: {
-        viewName: "user",
-        viewTitle: "Available Users",
-        viewRoute: "/users",
     },
     posts: {
         viewName: "posts",

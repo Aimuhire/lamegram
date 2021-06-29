@@ -27,7 +27,7 @@ export class UserListItemView {
         getPostsBtn.addEventListener('click', () => {
             const view = ViewRegistry.posts;
             view.viewTitle = `${this.name}'s Lame Posts`;
-            view.viewRoute = `/users/${this.userId}/posts`
+            view.viewRoute = `/lamegram/users/${this.userId}/posts`
             Router.navigateTo(view, { userId: this.userId, userName: this.name })
         })
         // Inject data
