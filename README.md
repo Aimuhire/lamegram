@@ -15,7 +15,7 @@ This project is also a Single Page Application for it only loads the index.html 
 
 I might keep on improving this project as it helps JS users interested in MVC and SPA to learn some of the fundamental best practices.
 
-Of course it's far from perfect, but feel free to raise an issue or make some contributions.
+Of course it's far from perfect, so feel free to raise an issue or make some contributions.
 
 
 
