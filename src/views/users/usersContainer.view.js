@@ -1,17 +1,21 @@
-import { UserView } from "../../views/users/userListItem.view.js";
+import { UserListItemView } from "../../views/users/userListItem.view.js";
 
 export class UsersContainerView {
     constructor(users) {
-        this.userViews = []
+        this.userListItemViews = [];
         users.forEach(user => {
-            this.userViews.push(new UserView(user))
+            this.userListItemViews.push(new UserListItemView(user, this.router))
         });
     }
 
+    /**
+     * Builds the view element.
+     * @returns {HTMLElement} HTML element.
+    */
     getElement() {
         const usersContainer = document.createElement('div');
         usersContainer.className = "users-container";
-        this.userViews.forEach(userView => {
+        this.userListItemViews.forEach(userView => {
             usersContainer.appendChild(userView.getElement());
         });
         return usersContainer;

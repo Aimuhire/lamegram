@@ -1,35 +1,48 @@
-import { APIEndpoints } from './services/api/v1/apiEndpoints.js'
-import { Router } from './services/router.js'
+import { UsersApi } from "./services/api/v1/users/users.api.js";
+import { Router } from "./services/router.js";
 import { ViewRegistry } from "./views/viewRegistry.js";
 
 class App {
-    constructor() {
-        this.rootElement = document.getElementById('lame-app-root');
+  constructor() {
+    this.path = window.location.pathname;
+  }
+
+  /**
+   * Loads content into the app view.
+   */
+  renderAppView() {
+    if (this.path?.match(/^\/users\/\d+$/)) {
+      Router.navigateTo(ViewRegistry.user);
+    } else if (this.path?.match(/^\/users\/\d+\/posts$/)) {
+      const userId = Number(this.path.match(/^\/users\/(\d+)\/posts$/)[1]);
+      UsersApi.getUser(userId)
+        .then((response) => response.json())
+        .then((user) => {
+          Router.navigateTo(ViewRegistry.posts, {
+            userId,
+            userName: user.name,
+          });
+        })
+        .catch(() => alert("Could not retrieve user info."));
+    } else if (this.path?.match(/^\/users\/\d+\/posts\/\d+$/)) {
+      const matchObj = this.path.match(/^\/users\/(\d+)\/posts\/(\d+)$/);
+      const userId = Number(matchObj[1]);
+      const postId = Number(matchObj[2]);
+      UsersApi.getUser(userId)
+        .then((response) => response.json())
+        .then((user) => {
+          Router.navigateTo(ViewRegistry.post, {
+            userId,
+            postId,
+            userName: user.name,
+          });
+        })
+        .catch(() => alert("Could not retrieve user info."));
+    } else {
+      Router.navigateTo(ViewRegistry.users);
     }
-
-    renderView() {
-        console.log("wait we here")
-        const path = window.location.pathname;
-        console.log(path)
-        switch (path) {
-            case !path:
-                console.log("routing to root")
-                break;
-            case path.match(/^users\/\d+$/):
-                console.log("routing to users.html");
-                break
-            case path.match(/^users\/\d+\/album$/):
-                console.log("routing to album.html")
-            default:
-                this.router.navigateTo(ViewRegistry.users);
-                break;
-        }
-    }
-
-
+  }
 }
 
-const app = new App()
-app.router = new Router(app)
-console.log("jadshaiDa ")
-app.renderView()
+const app = new App();
+app.renderAppView();
