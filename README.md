@@ -13,7 +13,7 @@ This project illustrates the use of the Model View Controller architecture used 
 This project is also a Single Page Application for it only loads the index.html once, all the subsequent pages are injected into the DOM using JavaScript.
 
 
-I might keep on improving this project as it helps JS users interested in MVC and SPA to learn some of the fundamental best practices.
+I might keep on improving this project as it might help some JS users interested in MVC and SPA to learn some of the fundamental best practices.
 
 Of course it's far from perfect, so feel free to raise an issue or make some contributions.
 
