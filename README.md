@@ -6,7 +6,7 @@ Lame #VanillaJs project with #MVC and #SPA. Just a blog for the 10 infamous lame
 
 #### Architecture: MVC
 
-This project illustrates the use of the Model View Controller architecture used by most popular frontend Frameworks using VanillaJs, pure and plain.
+This project illustrates the Model View Controller architecture used by most popular frontend Frameworks using VanillaJs, pure and plain.
 
 #### SPA with Routing that works(hmmm...)
 
