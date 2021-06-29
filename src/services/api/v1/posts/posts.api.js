@@ -1,4 +1,4 @@
-import { HttpClient } from "../../../HttpClient.service.js";
+import { HttpClient } from "../../../httpClient.service.js";
 import { APIEndpoints } from "../apiEndpoints.js";
 
 export class PostsApi {

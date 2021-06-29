@@ -11,10 +11,12 @@ class App {
    * Loads content into the app view.
    */
   renderAppView() {
-    if (this.path?.match(/^\/users\/\d+$/)) {
+    if (this.path?.match(/^\/lamegram\/users\/\d+$/)) {
       Router.navigateTo(ViewRegistry.user);
-    } else if (this.path?.match(/^\/users\/\d+\/posts$/)) {
-      const userId = Number(this.path.match(/^\/users\/(\d+)\/posts$/)[1]);
+    } else if (this.path?.match(/^\/lamegram\/users\/\d+\/posts$/)) {
+      const userId = Number(
+        this.path.match(/^\/lamegram\/users\/(\d+)\/posts$/)[1]
+      );
       UsersApi.getUser(userId)
         .then((response) => response.json())
         .then((user) => {
@@ -24,8 +26,10 @@ class App {
           });
         })
         .catch(() => alert("Could not retrieve user info."));
-    } else if (this.path?.match(/^\/users\/\d+\/posts\/\d+$/)) {
-      const matchObj = this.path.match(/^\/users\/(\d+)\/posts\/(\d+)$/);
+    } else if (this.path?.match(/^\/lamegram\/users\/\d+\/posts\/\d+$/)) {
+      const matchObj = this.path.match(
+        /^\/lamegram\/users\/(\d+)\/posts\/(\d+)$/
+      );
       const userId = Number(matchObj[1]);
       const postId = Number(matchObj[2]);
       UsersApi.getUser(userId)
