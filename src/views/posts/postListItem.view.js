@@ -29,7 +29,7 @@ export class PostListItemView {
         readMoreBtn.addEventListener('click', ()=>{
             const view = ViewRegistry.post;
             view.viewName = this.title;
-            view.viewRoute  = `/users/${this.userId}/posts/${this.postId}`;
+            view.viewRoute  = `/lamegram/users/${this.userId}/posts/${this.postId}`;
             Router.navigateTo(view, {userId: this.userId, postId: this.postId, userName: this.userName})
         })
         // Inject data

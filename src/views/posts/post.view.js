@@ -29,7 +29,7 @@ export class PostView {
         authorLink.addEventListener('click', () => {
             const view = ViewRegistry.posts;
             view.viewTitle = `${this.userName}'s Lame Posts`;
-            view.viewRoute = `/users/${this.userId}/posts`
+            view.viewRoute = `/lamegram/users/${this.userId}/posts`
             Router.navigateTo(view, { userId: this.userId, userName: this.userName })
         })
         // Inject data
