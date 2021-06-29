@@ -1,10 +1,11 @@
 import { UserView } from "../../views/users/userListItem.view.js";
 
 export class UsersContainerView {
-    constructor(users) {
-        this.userViews = []
+    constructor(users, router) {
+        this.userViews = [];
+        this.router = router;
         users.forEach(user => {
-            this.userViews.push(new UserView(user))
+            this.userViews.push(new UserView(user, this.router))
         });
     }
 

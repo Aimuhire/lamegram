@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
 /* shared */
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
 .page-title {
     font-size: 2em;
     display: flex;
@@ -6,11 +14,17 @@
     padding-top: 50px;
 }
 
-/* users page styles */
-
-#lame-app-root {
-    background-color: whitesmoke;
+.primary-btn {
+    border: none;
+    background-color: #3F86F3;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 3px;
+    cursor: pointer;
 }
+
+/* users page styles */
 
 .users-container {
     margin: 50px 0;
@@ -32,6 +46,7 @@
 
 .card {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
 }
 
 .card:hover {
@@ -48,12 +63,86 @@
 
 }
 
-.get-user-posts-btn {
+
+
+/* users container */
+.link-btn {
     border: none;
-    background-color: #3F86F3;
-    color: white;
+    color: #3F86F3;
+    text-decoration: underline;
     padding: 5px;
     margin-top: 10px;
     border-radius: 3px;
     cursor: pointer;
+}
+
+.posts-container, .post-container {
+    margin: 50px 0;
+    padding:  0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-list-item {
+    padding: 7px;
+    justify-content: space-between;
+    width: 600px;
+    margin: 30px;
+    background-color: white;
+
+}
+
+.post-title {
+    font-size: 1em;
+    padding: 10px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.post-excerpt {
+    color: gray;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+}
+
+.read-more-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+/* post item  */
+
+.post {
+    padding: 13px;
+}
+
+.post-body {
+    padding: 30px 0;
+    letter-spacing: 1px; 
+    color: #171717;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+/* page title  */
+.page-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.page-action-btn {
+    border: none;
+    font-size: 1.2em;
+    margin-right: 3em;
+    background-color: #3F86F3;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.page-action-btn:hover {
+    box-shadow: 0 7px 20px rgba(0,0,0,0.15), 0 5px 5px rgba(0,0,0,0.22);
 }
