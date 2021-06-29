@@ -4,7 +4,7 @@ import { PostController } from "../controllers/posts/post.controller.js";
 export const ViewRegistry = {
     users: {
         viewName: "users",
-        viewTitle: "Available Users",
+        viewTitle: "Lame Ten",
         viewRoute: "/lamegram/users",
         viewController: UsersController,
     },
