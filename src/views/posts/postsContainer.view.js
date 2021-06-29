@@ -8,11 +8,15 @@ export class PostsContainerView {
         });
     }
 
+    /**
+     * Builds the view element.
+     * @returns {HTMLElement} HTML element.
+    */
     getElement() {
         const postsContainer = document.createElement('div');
         postsContainer.className = "posts-container";
-        this.postListItemViews.forEach(userView => {
-            postsContainer.appendChild(userView.getElement());
+        this.postListItemViews.forEach(postListItemView => {
+            postsContainer.appendChild(postListItemView.getElement());
         });
         return postsContainer;
     }

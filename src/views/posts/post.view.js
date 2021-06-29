@@ -8,7 +8,11 @@ export class PostView {
         this.body = post.body;
         this.userName = post.userName;
     }
-
+    
+    /**
+     * Builds the view element.
+     * @returns {HTMLElement} HTML element.
+    */
     getElement() {
         const postContainer = document.createElement('div');
         const postContentContainer = document.createElement('div');
@@ -29,7 +33,7 @@ export class PostView {
             Router.navigateTo(view, { userId: this.userId, userName: this.userName })
         })
         // Inject data
-        postTitle.innerHTML = this.title.toUpperCase();
+        postTitle.innerHTML = `💭 ${this.title.toUpperCase()}`;
         postBody.innerHTML = this.body;
         authorLinkContainer.innerHTML = "Lame Author: "
         authorLink.innerHTML = this.userName;

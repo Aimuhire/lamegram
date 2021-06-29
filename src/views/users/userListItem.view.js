@@ -1,13 +1,17 @@
 import { Router } from "../../services/router.js"
 import { ViewRegistry } from "../viewRegistry.js";
 
-export class UserView {
+export class UserListItemView {
     constructor(user) {
         this.userId = user.userId;
         this.name = user.name;
         this.email = user.email;
     }
 
+    /**
+     * Builds the view element.
+     * @returns {HTMLElement} HTML element.
+    */
     getElement() {
         const userListItemContainer = document.createElement('div');
         const userInfoContainer = document.createElement('div');
@@ -27,13 +31,14 @@ export class UserView {
             Router.navigateTo(view, { userId: this.userId, userName: this.name })
         })
         // Inject data
-        userName.innerHTML = this.name;
-        userEmail.innerHTML = this.email;
+        userName.innerHTML = `😵 ${this.name}`;
+        userEmail.innerHTML =  `📧 ${this.email}`;
         getPostsBtn.innerHTML = "Get User’s Posts"
         // Append data to container
         userInfoContainer.appendChild(userName)
         userInfoContainer.appendChild(userEmail)
-        getUserPostsContainer.appendChild(getPostsBtn)
+        getUserPostsContainer.innerHTML = "👉 "
+        getUserPostsContainer.append(getPostsBtn)
 
         userListItemContainer.appendChild(userInfoContainer)
         userListItemContainer.appendChild(getUserPostsContainer)

@@ -9,6 +9,10 @@ export class PostListItemView {
         this.excerpt = postListItem.excerpt;
     }
 
+    /**
+     * Builds the view element.
+     * @returns {HTMLElement} HTML element.
+    */
     getElement() {
         const postListItemContainer = document.createElement('div');
         const postContentContainer = document.createElement('div');
@@ -29,7 +33,7 @@ export class PostListItemView {
             Router.navigateTo(view, {userId: this.userId, postId: this.postId, userName: this.userName})
         })
         // Inject data
-        postTitle.innerHTML = this.title.toUpperCase();
+        postTitle.innerHTML = `💭 ${this.title.toUpperCase()}`;
         postExcerpt.innerHTML = this.excerpt;
         readMoreBtn.innerHTML = "Read More"
         // Append data to container

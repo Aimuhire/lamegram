@@ -5,6 +5,10 @@ export class PageHeaderView {
         this.actionCb = actionCb;
     }
 
+    /**
+     * Builds the view element.
+     * @returns {HTMLElement} HTML element.
+    */
     getElement() {
         const titleContainerElement = document.createElement('div');
         const titleElement = document.createElement('div');
