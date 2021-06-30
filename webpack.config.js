@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const env = process.env.WEBPACK_ENV
 
 const JS_SOURCE_FILES = ['babel-polyfill', './src/app.js']
-const OUTPUT_FILENAME = 'bundle.js'
+const OUTPUT_FILENAME = 'bundle'
 const DEST_FOLDER = 'dist'
 const COPYRIGHT = `@aimuhire https://github.com/aimuhire/lamegram`
 
