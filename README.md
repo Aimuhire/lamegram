@@ -23,5 +23,5 @@ Of course it's far from perfect, so feel free to raise an issue or make some con
 The name of the project was picked from a handful of lame abstract project names. It was solely picked because it met the one requirement of being the lamest.
 
 #### ooh... The NodeJs Express server
-Ignore the file. It was used initially for development just to respond or 404 with the index.html page.
-This Github depployment is now using @rafgraph SPA on Github Pages fix.
+Ignore the file. It was used initially for development just to respond all 404 with the index.html page.
+This Github deployment is now using [@rafgraph](https://github.com/rafgraph/spa-github-pages) SPA on Github Pages fix.
